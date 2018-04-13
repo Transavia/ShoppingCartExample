@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+  .container { 
+    margin-top: 3rem;
+  }
+  .section-checkout {
+    display: none;
+    margin-top: 5rem;
+  }
+  .section-checkout:target {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <main class="container">
+		<header>
+      <h1>Checkout process</h1>
+      <nav>
+        <span>Passenger details &raquo;</span>
+        <span>Contact details &raquo;</span>
+        <span>Confirmation</span>
+      </nav>
+    </header>
+
+    <!-- PASSENGER DETAILS -->
+    <section class="section-checkout" id="passenger-details">
+      <h2>Passenger details</h2>
+      <!-- Gender -->
+      <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">Gender</label>
+        <div class="col-sm-10 pt-1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="gender_m" value="male">
+            <label class="form-check-label" for="gender_m">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="gender_f" value="female">
+            <label class="form-check-label" for="gender_f">Female</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- First name -->
+      <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">First name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="firstName" id="firstName" placeholder="">
+        </div>
+      </div>
+
+      <!-- Last name -->
+      <div class="form-group row">
+        <label for="lastName" class="col-sm-2 col-form-label">Last name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="lastName" id="lastName" placeholder="">
+        </div>
+      </div>
+      
+      <!-- Date of birth -->
+      <div class="form-group row">
+        <label for="dateOfBirth" class="col-sm-2 col-form-label">Date of birth</label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email address</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" name="email" id="email" placeholder="">
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group row">
+        <label for="phoneNumber" class="col-sm-2 col-form-label">Phone</label>
+        <div class="col-sm-10">
+          <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="">
+        </div>
+      </div>
+
+      <!-- Next -->
+      <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <a data-href="#contact-details" class="btn btn-primary" data-cta>Next</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS -->
+    <section class="section-checkout" id="contact-details">
+        <h2>Contact details</h2>
+  
+        <!-- First name -->
+        <div class="form-group row">
+          <label for="firstName" class="col-sm-2 col-form-label">First name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="firstName" id="firstNameContact" placeholder="">
+          </div>
+        </div>
+  
+        <!-- Last name -->
+        <div class="form-group row">
+          <label for="lastName" class="col-sm-2 col-form-label">Last name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="lastName" id="lastNameContact" placeholder="">
+          </div>
+        </div>
+  
+        <!-- Email -->
+        <div class="form-group row">
+          <label for="email" class="col-sm-2 col-form-label">Email address</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" id="emailContact" placeholder="">
+          </div>
+        </div>
+  
+        <!-- Phone -->
+        <div class="form-group row">
+          <label for="phoneNumber" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input type="tel" class="form-control" name="phoneNumber" id="phoneNumberContact" placeholder="">
+          </div>
+        </div>
+  
+        <!-- Next -->
+        <div class="form-group row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+            <a data-href="#confirmation" class="btn btn-primary" data-cta>Next</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONFIRMATION -->
+      <section class="section-checkout" id="confirmation">
+        <div id="confirmation-content"></div>
+      </section>
+  </main>
+
+	<script src="/js/helpers.js"></script>
+  <script src="/js/Checkout.js"></script>
+  <script>
+    const checkout = new Checkout();
+    checkout.init();
+  </script>
+</body>
+</html>

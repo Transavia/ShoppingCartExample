@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Flight offers</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+	.container { 
+		margin-top: 3rem;
+	}
+	</style>
+</head>
+<body>
+	<main class="container">
+		<header>
+			<h1>Flight offers</h1>
+		</header>
+
+		<table class="table table-striped">
+			<thead>
+				<th>Flight no.</th>
+				<th>Origin</th>
+				<th>Destination</th>
+				<th>Date</th>
+				<th>Departure time</th>
+				<th>Arrival time</th>
+				<th>Price</th>
+				<th></th>
+			</thead>
+			<tbody data-flight-results></tbody>
+		</table>
+	</main>
+
+	<script src="/js/helpers.js"></script>
+	<script src="/js/FlightOffers.js"></script>
+	
+	<script>
+		const flightOffers = new FlightOffers(document.querySelector('[data-flight-results]'))
+		flightOffers.init()
+	</script>
+</body>
+</html>

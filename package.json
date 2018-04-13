@@ -1,0 +1,19 @@
+{
+  "name": "ShoppingCartExample",
+  "version": "1.0.0",
+  "description": "Demo application for using the Transavia Shopping Cart Api.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Transavia/ShoppingCartExample"
+  },
+  "author": "Transavia Airlines C.V.",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3"
+  }
+}
