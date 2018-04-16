@@ -21,7 +21,7 @@ class FlightOffers {
     const year = date.getFullYear()
     const nextMonth = date.getMonth() + 2
     const rangeStart = `${year}${pad(nextMonth, 2)}01` // start with 1st of next month's current date
-    const rangeEnd = `${year}${pad(nextMonth, 2)}10` // end with the 28th day of next month's current date
+    const rangeEnd = `${year}${pad(nextMonth, 2)}10` // end with the 10th day of next month's current date
     const params = {
       origin: 'AMS',
       destination: 'BCN',
